@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <title>
+        Login Page
+    </title>
+    <body>
+        <form id = "login_form" method="post" onsubmit="return validation()">
+            <table width = 100%>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <table border="2">
+                            <tr>
+                                <td colspan="2" align ="center">Login Page</td>    
+                            </tr>
+                            <tr>
+                                <td><label for="usr_name">User Name:</label></td>
+                                <td><input type="text" id="usr_name" name="usr_name" placeholder="Enter User Name"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="pwd">Password:</label></td>
+                                <td><input type="password" id="pwd" name="pwd" minlength="8" maxLength="12"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align ="center"><input type="submit" value="Submit"> <input type="reset" value="Reset" onclick="resetform()"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            function validation() {
+                let un = document.getElementById('usr_name').value.trim();
+                let pwd = document.getElementById('pwd').value.trim();
+               
+                if (!un || !pwd) {
+                    alert("Please enter both username and password");
+                    return false;
+                }
+    
+                if (un === "student" && pwd === "simplilearn") {
+                    alert("User details are correct, Login valid");
+    
+                    return true;
+                } else {
+                    alert("Login Failed, Please enter a valid username and password");
+                    return false;
+                }
+            }
+            function resetform() 
+            {
+                document.getElementById('usr_name').value = '';
+                let pwd = document.getElementById('pwd').value = '';
+                document.getElementById('usr_name').focus();
+            }
+        </script>    
+    </body>
+</html>

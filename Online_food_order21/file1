@@ -1,0 +1,19 @@
+<table border="2">
+                <tr>
+                    <td>
+                    </td>
+                    <td>Login Page</td>    
+                </tr>
+                <tr>
+                    <td><label for="usr_name">User Name:</label></td>
+                    <td><input type="text" id="usr_name" name="usr_name"></td>
+                </tr>
+                <tr>
+                    <td><label for="pwd">Password:</label></td>
+                    <td><input type="password" id="pwd" name="pwd" minlength="8" maxLength="12"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit"></td>
+                    <td><input type="reset" value="Reset"></td>
+                </tr>
+            </table>
