@@ -4,10 +4,10 @@
         
     </head>
     <title>
-        Login Page
+        Home Page
     </title>
     <body>
-        <form id = "login_form" method="post" onsubmit="return validation()">
+        <form id = "Home_page" method="post" onsubmit="return validation()">
             <table width = 100%>
                 <tr>
                     <td></td>
@@ -16,18 +16,17 @@
                     <td align="center">
                         <table border="2">
                             <tr>
-                                <td colspan="2" align ="center">Login Page</td>    
+                                <td colspan="2" align ="center">Menu</td>    
                             </tr>
                             <tr>
-                                <td><label for="usr_name">User Name:</label></td>
-                                <td><input type="text" id="usr_name" name="usr_name" placeholder="Enter User Name"></td>
+                                <td><input type="submit" value="Submit" id = "bfast">
+                                    <a href ="" id ="breakfast">Break fast</a></td>
                             </tr>
                             <tr>
-                                <td><label for="pwd">Password:</label></td>
-                                <td><input type="password" id="pwd" name="pwd" minlength="8" maxLength="12"></td>
+                                <td><a href ="" id ="Lunch">Lunch</a></td>
                             </tr>
                             <tr>
-                                <td colspan="2" align ="center"><input type="submit" value="Submit"> <input type="reset" value="Reset" onclick="resetform()"></td>
+                                <td><a href ="" id ="Dinner">Dinner</a></td>
                             </tr>
                         </table>
                     </td>
@@ -38,6 +37,30 @@
             </table>
         </form>
         <script>
+            function EnablebreakfastButton() 
+            {
+            const myButton = document.getElementById('bfast');
+            const now = new Date();
+            const currentHour = now.getHours(); // Get the current hour (0-23)
+
+            // Disable the button if it's between 9 AM (hour 9) and 5 PM (hour 17)
+            if (currentHour >= 6 && currentHour < 11) {
+                myButton.disabled = false; // Enable the button
+                myButton.ariaPlaceholder("Button is enabled");
+            } else {
+                myButton.disabled = true; // Disable the button
+                myButton.ariaPlaceholder("Button is disabled");
+            }
+            }
+
+// Call the function initially to set the button state on page load
+EnablebreakfastButton();
+
+// Optionally, update the button state periodically (e.g., every minute)
+// to account for time changes without requiring a page refresh
+setInterval(EnablebreakfastButton, 60 * 1000); // Update every 60 seconds
+
+
             function validation() {
                 let un = document.getElementById('usr_name').value.trim();
                 let pwd = document.getElementById('pwd').value.trim();
@@ -49,8 +72,8 @@
     
                 if (un === "student" && pwd === "simplilearn") {
                     alert("User details are correct, Login valid");
-                    //window.location.href("/labuser/GitHubFiles/Online-food-order/Online_food_order21/Home_page.html");
-                    //return true;
+    
+                    return true;
                 } else {
                     alert("Login Failed, Please enter a valid username and password");
                     return false;
