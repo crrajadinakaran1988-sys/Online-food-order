@@ -47,10 +47,15 @@
                     return false;
                 }
     
-                if (un === "student" && pwd === "simplilearn") {
+                if (un === "student" && pwd === "simplilearn") 
+                {
                     alert("User details are correct, Login valid");
-                    //window.location.href("/labuser/GitHubFiles/Online-food-order/Online_food_order21/Home_page.html");
-                    //return true;
+                    window.close();
+                    //window.location.href="Home_page.html";
+                    window.open("Home_page.html");
+                    const newWindow = window.open('child.html', '_blank');
+                    newWindow.myData = 'Data for child'; // Direct property assignment
+                    return true;
                 } else {
                     alert("Login Failed, Please enter a valid username and password");
                     return false;

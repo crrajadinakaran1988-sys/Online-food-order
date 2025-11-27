@@ -7,7 +7,7 @@
         Home Page
     </title>
     <body>
-        <form id = "Home_page" method="post" onsubmit="return validation()">
+        <form id = "Home_page" method="post">
             <table width = 100%>
                 <tr>
                     <td></td>
@@ -19,14 +19,19 @@
                                 <td colspan="2" align ="center">Menu</td>    
                             </tr>
                             <tr>
-                                <td><input type="submit" value="Submit" id = "bfast">
-                                    <a href ="" id ="breakfast">Break fast</a></td>
+                                <td>
+                                    <input type="submit" value="Breakfast" id = "bfast" width="100%">
+                                </td>
                             </tr>
                             <tr>
-                                <td><a href ="" id ="Lunch">Lunch</a></td>
+                                <td>
+                                    <input type="submit" value="Lunch" id = "lnch" width="100%">
+                                </td>
                             </tr>
                             <tr>
-                                <td><a href ="" id ="Dinner">Dinner</a></td>
+                                <td>
+                                    <input type="submit" value="Dinner" id = "din" width="100%">
+                                </td>
                             </tr>
                         </table>
                     </td>
@@ -39,17 +44,29 @@
         <script>
             function EnablebreakfastButton() 
             {
-            const myButton = document.getElementById('bfast');
+            const btnbkft = document.getElementById('bfast');
+            const btnlnch = document.getElementById('lnch');
+            const btndin = document.getElementById('din');
             const now = new Date();
             const currentHour = now.getHours(); // Get the current hour (0-23)
-
+            
             // Disable the button if it's between 9 AM (hour 9) and 5 PM (hour 17)
             if (currentHour >= 6 && currentHour < 11) {
-                myButton.disabled = false; // Enable the button
-                myButton.ariaPlaceholder("Button is enabled");
-            } else {
-                myButton.disabled = true; // Disable the button
-                myButton.ariaPlaceholder("Button is disabled");
+                btnbkft.disabled = false; // Enable the button
+            } 
+            else if (currentHour >= 11 && currentHour < 15)
+            {
+                btnlnch.disabled = false; // Enable the button
+            }
+            else if (currentHour >= 18 && currentHour < 22)
+            {
+                btndin.disabled = false; // Enable the button
+            }
+            else
+            {
+                btnbkft.disabled = true;   
+                btnlnch.disabled = true;
+                btndin.disabled = true;
             }
             }
 
@@ -60,31 +77,6 @@ EnablebreakfastButton();
 // to account for time changes without requiring a page refresh
 setInterval(EnablebreakfastButton, 60 * 1000); // Update every 60 seconds
 
-
-            function validation() {
-                let un = document.getElementById('usr_name').value.trim();
-                let pwd = document.getElementById('pwd').value.trim();
-               
-                if (!un || !pwd) {
-                    alert("Please enter both username and password");
-                    return false;
-                }
-    
-                if (un === "student" && pwd === "simplilearn") {
-                    alert("User details are correct, Login valid");
-    
-                    return true;
-                } else {
-                    alert("Login Failed, Please enter a valid username and password");
-                    return false;
-                }
-            }
-            function resetform() 
-            {
-                document.getElementById('usr_name').value = '';
-                let pwd = document.getElementById('pwd').value = '';
-                document.getElementById('usr_name').focus();
-            }
         </script>    
     </body>
 </html>
