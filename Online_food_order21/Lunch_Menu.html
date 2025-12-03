@@ -9,7 +9,7 @@
         <form id = "Lunch_Menu">
             <table width = 100%>
                 <tr>
-                    <td></td>
+                    <td><input type="submit" value="Back to Main menu" id = "Mn_menu" width="100%" onclick="bckopen()"></td>
                 </tr>
                 <tr>
                     <td align="center">
@@ -145,6 +145,12 @@
                 let itm1 = document.getElementById(item).value;
                 itm1 = itm1 - 1;
                 document.getElementById(item).value = itm1;
+                return true;
+            }
+            function bckopen()
+            {
+                window.open("Home_page.html");
+                window.close();
                 return true;
             }
         </script>    
