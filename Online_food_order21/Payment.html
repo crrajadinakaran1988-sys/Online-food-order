@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <title>
+        Payment
+    </title>
+    <body>
+        <form id = "Payment">
+            <table width = 100%>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <table border="2">
+                            <tr>
+                                <td colspan="4" align ="center">Payment</td>    
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <label for="Items">Items</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="items">Idlli</label>
+                                            </td>
+                                        </tr>                                        
+                                    </table>
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <label for="Noofitems">Count</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="cnt">10</label>
+                                            </td>    
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <label for="Rate">Rate</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="Rate">$10</label>
+                                            </td>    
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <label for="Total">Total</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="cnt">100</label>
+                                            </td>    
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            function add(item) 
+            {
+                let itm1 = document.getElementById(item).value;
+                itm1 = itm1 + 1;
+                document.getElementById(item).value = itm1;
+                return true;
+            }
+            function sub(item) 
+            {
+                let itm1 = document.getElementById(item).value;
+                itm1 = itm1 - 1;
+                document.getElementById(item).value = itm1;
+                return true;
+            }
+        </script>    
+    </body>
+</html>
