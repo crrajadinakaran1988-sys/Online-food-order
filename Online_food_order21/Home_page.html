@@ -7,11 +7,11 @@
         Home Page
     </title>
     <link rel="stylesheet" href="CSS/CSSFile.css">
-    <body>
+    <body onload="fn_load()">
         <form id = "Home_page" method="post">
             <table width = 100%>
                 <tr>
-                    <td></td>
+                    <td><input type="text" id="usr_name" name="usr_name"></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -80,6 +80,16 @@
 
         </form>
         <script>
+            function fn_load()
+            {
+                let retrievedValue = localStorage.getItem('userid');
+                alert(retrievedValue);
+                //alert(localStorage.getItem('userid'));
+                document.getElementById('usr_name').innerHTML = retrievedValue;
+                //alert(retrievedValue.toString);
+                //document.getElementById
+                //console.log(retrievedValue); // Output: valueToStore
+            }
             function BrkfOpen() 
             {
                     window.open("Breakfast_Menu.html");

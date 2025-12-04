@@ -1,8 +1,13 @@
 
-
 h1 {
 
     text-decoration: underline;
     font-family: Arial, sans-serif;
     color: Blue;
+}
+
+body {
+    background-color: pink;/*rgba(255, 255, 255, 0.8);*/
+    background-size: cover;
+    background-repeat: no-repeat;
 }
