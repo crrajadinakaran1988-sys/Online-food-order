@@ -1,0 +1,7 @@
+
+input[type=submit] {
+  background-color: pink;
+  width: 150px;
+  border: none;
+  outline: none;
+}

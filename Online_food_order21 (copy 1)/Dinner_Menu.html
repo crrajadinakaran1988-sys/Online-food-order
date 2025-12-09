@@ -3,16 +3,13 @@
     <head>
     </head>
     <title>
-        Breakfast Menu
+        Dinner Menu
     </title>
-    <link rel="stylesheet" href="CSS/CSSFile.css">
-    <link rel="stylesheet" href="CSS/text_boxcss.css">
-    <link rel="stylesheet" href="CSS/Button_css.css">
-    <body onload="fn_load()">
-        <form id = "Breakfast_Menu">
+    <body>
+        <form id = "Dinner_Menu">
             <table width = 100%>
                 <tr>
-                    <td><input type="submit" value="Back to Main menu" id = "Mn_menu" width="100%" onclick="bckopen()"></td><td><input type="text" id="usr_name" name="usr_name"></td>
+                    <td><input type="submit" value="Back to Main menu" id = "Mn_menu" width="100%" onclick="bckopen()"></td>
                 </tr>
                 <tr>
                     <td align="center">
@@ -51,9 +48,9 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <input type="submit" value="add" onclick="add('disp_idl_itm_nos1')"> 
-                                                <input type="text" id="disp_idl_itm_nos1" name="disp_item_nos1" value="0" width="5px" disabled="true">
-                                                <input type="submit" value="sub" onclick="sub('disp_idl_itm_nos1')">
+                                                <input type="submit" value="add" onclick="add('disp_idl_itm_nos')"> 
+                                                <input type="text" id="disp_idl_itm_nos" name="disp_item_nos" value="0" width="5px" disabled="true">
+                                                <input type="submit" value="sub" onclick="sub('disp_idl_itm_nos')">
                                             </td>    
                                         </tr>
                                     </table>
@@ -69,9 +66,9 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <input type="submit" value="add" onclick="add('disp_idl_itm_nos2')"> 
-                                                <input type="text" id="disp_idl_itm_nos2" name="disp_item_nos2" value="0" width="5px" disabled="true">
-                                                <input type="submit" value="sub" onclick="sub('disp_idl_itm_nos2')">
+                                                <input type="submit" value="add" onclick="add('disp_idl_itm_nos')"> 
+                                                <input type="text" id="disp_idl_itm_nos" name="disp_item_nos" value="0" width="5px" disabled="true">
+                                                <input type="submit" value="sub" onclick="sub('disp_idl_itm_nos')">
                                             </td>    
                                         </tr>
                                     </table>
@@ -85,9 +82,9 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <input type="submit" value="add" onclick="add('disp_idl_itm_nos3')"> 
-                                                <input type="text" id="disp_idl_itm_nos3" name="disp_item_nos3" value="0" width="5px" disabled="true">
-                                                <input type="submit" value="sub" onclick="sub('disp_idl_itm_nos3')">
+                                                <input type="submit" value="add" onclick="add('disp_idl_itm_nos')"> 
+                                                <input type="text" id="disp_idl_itm_nos" name="disp_item_nos" value="0" width="5px" disabled="true">
+                                                <input type="submit" value="sub" onclick="sub('disp_idl_itm_nos')">
                                             </td>    
                                         </tr>
                                     </table>
@@ -102,9 +99,9 @@
                                             </td>
                                             <tr>
                                                 <td>
-                                                    <input type="submit" value="add" onclick="add('disp_idl_itm_nos4')"> 
-                                                    <input type="text" id="disp_idl_itm_nos4" name="disp_item_nos4" value="0" width="5px" disabled="true">
-                                                    <input type="submit" value="sub" onclick="sub('disp_idl_itm_nos4')">
+                                                    <input type="submit" value="add" onclick="add('disp_idl_itm_nos')"> 
+                                                    <input type="text" id="disp_idl_itm_nos" name="disp_item_nos" value="0" width="5px" disabled="true">
+                                                    <input type="submit" value="sub" onclick="sub('disp_idl_itm_nos')">
                                                 </td>    
                                             </tr>
                                         </tr>
@@ -119,9 +116,9 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <input type="submit" value="add" onclick="add('disp_idl_itm_nos5')"> 
-                                                <input type="text" id="disp_idl_itm_nos5" name="disp_item_nos5" value="0" width="5px" disabled="true">
-                                                <input type="submit" value="sub" onclick="sub('disp_idl_itm_nos5')">
+                                                <input type="submit" value="add" onclick="add('disp_idl_itm_nos')"> 
+                                                <input type="text" id="disp_idl_itm_nos" name="disp_item_nos" value="0" width="5px" disabled="true">
+                                                <input type="submit" value="sub" onclick="sub('disp_idl_itm_nos')">
                                             </td>    
                                         </tr>
                                     </table>
@@ -136,16 +133,6 @@
             </table>
         </form>
         <script>
-            function fn_load()
-            {
-                let retrievedValue = localStorage.getItem('userid');
-                //alert(retrievedValue);
-                //alert(localStorage.getItem('userid'));
-                document.getElementById('usr_name').value = "Welcome "+retrievedValue;
-                //alert(retrievedValue.toString);
-                //document.getElementById
-                //console.log(retrievedValue); // Output: valueToStore
-            }
             function add(item) 
             {
                 let itm1 = document.getElementById(item).value;
