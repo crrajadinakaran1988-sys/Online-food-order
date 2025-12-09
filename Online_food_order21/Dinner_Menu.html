@@ -5,11 +5,13 @@
     <title>
         Dinner Menu
     </title>
-    <body>
+    <script src="Javascript/func_load.js"></script>
+    <script src="Javascript/func_bck_open.js"></script>
+    <body onload="fn_load()">
         <form id = "Dinner_Menu">
             <table width = 100%>
                 <tr>
-                    <td><input type="submit" value="Back to Main menu" id = "Mn_menu" width="100%" onclick="bckopen()"></td>
+                    <td><input type="submit" value="Back to Main menu" id = "Mn_menu" width="100%" onclick="bckopen()"></td><td><input type="text" id="usr_name" name="usr_name"></td>
                 </tr>
                 <tr>
                     <td align="center">
@@ -147,7 +149,7 @@
                 document.getElementById(item).value = itm1;
                 return true;
             }
-            function bckopen()
+            function backopen()
             {
                 window.open("Home_page.html");
                 window.close();

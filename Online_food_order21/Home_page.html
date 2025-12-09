@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="CSS/CSSFile.css">
     <link rel="stylesheet" href="CSS/text_boxcss.css">
     <script src="Javascript/javascript.js"></script>
+    <script src="Javascript/func_load.js"></script>
+    <script src ="Javascript/func_open.js"></script>
     <body onload="fn_load()">
         <form id = "Home_page" method="post">
             <table width = 100%>
@@ -56,17 +58,17 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <input type="submit" value="Breakfast" id = "bfast" width="100%" onclick="BrkfOpen()">
+                                                <input type="submit" value="Breakfast" id = "bfast" width="100%" onclick="func_Open('breakfast')">
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <input type="submit" value="Lunch" id = "lnch" width="100%" onclick="LnchOpen()">
+                                                <input type="submit" value="Lunch" id = "lnch" width="100%" onclick="func_Open('lunch')">
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <input type="submit" value="Dinner" id = "din" width="100%" onclick="DinnerOpen()">
+                                                <input type="submit" value="Dinner" id = "din" width="100%" onclick="func_Open('dinner')">
                                             </td>
                                         </tr>
                                     </table>
@@ -82,7 +84,7 @@
 
         </form>
         <script>
-            function fn_load()
+            function fnc_load()
             {
                 let retrievedValue = localStorage.getItem('userid');
                 alert(retrievedValue);
@@ -95,6 +97,7 @@
             function BrkfOpen() 
             {
                     window.open("Breakfast_Menu.html");
+                    localStorage.setItem('userid', un);
                     window.close();
                     return true;
             }

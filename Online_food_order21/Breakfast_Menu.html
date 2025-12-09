@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="CSS/CSSFile.css">
     <link rel="stylesheet" href="CSS/text_boxcss.css">
     <link rel="stylesheet" href="CSS/Button_css.css">
+    <script src="Javascript/func_load.js"></script>
+    <script src="Javascript/func_bck_open.js"></script>
     <body onload="fn_load()">
         <form id = "Breakfast_Menu">
             <table width = 100%>
@@ -160,7 +162,7 @@
                 document.getElementById(item).value = itm1;
                 return true;
             }
-            function bckopen()
+            function backopen()
             {
                 window.open("Home_page.html");
                 window.close();
